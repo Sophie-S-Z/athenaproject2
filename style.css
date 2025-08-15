@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;700&family=Nunito+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+:root {
+  --cream: #f5efe6;
+  --beige: #e7d9c4;
+  --black: #181818;
+  --white: #fff;
+  --glass: rgba(245,239,230,0.13);
+  --glass-border: rgba(231,217,196,0.22);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--black) 0%, #23201a 60%, var(--beige) 90%, var(--white) 100%);
+  color: var(--cream);
+  font-family: 'Baloo 2', 'Fredoka One', 'Nunito', 'Nunito Sans', cursive;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+  font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: none;
+}
+
+.background-cereal {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 48vh;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80vw 30vw at 50% 100%, rgba(255,255,255,0.92) 70%, rgba(255,255,255,0.7) 90%, transparent 100%),
+    radial-gradient(circle at 60% 90%, var(--cereal-yellow) 0 2vw, transparent 3vw),
+    radial-gradient(circle at 40% 95%, var(--beige) 0 1.5vw, transparent 2vw),
+    radial-gradient(circle at 70% 98%, var(--cream) 0 1.2vw, transparent 2vw),
+    radial-gradient(circle at 30% 98%, var(--cereal-yellow) 0 1vw, transparent 2vw);
+  opacity: 0.95;
+  filter: blur(0.5px);
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100vw;
+  text-align: center;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+}
+
+.logo {
+  font-family: 'Fredoka One', 'Baloo 2', cursive;
+  font-size: 4.2rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  margin-bottom: 0.5em;
+  text-shadow:
+    0 2px 24px var(--beige),
+    0 1px 0 var(--white),
+    0 0 0.2em var(--cream);
+  line-height: 1.1;
+  padding: 0.2em 0.6em;
+  border-radius: 2.5em;
+  background: rgba(245,239,230,0.13);
+  box-shadow: 0 2px 24px 0 rgba(231,217,196,0.13);
+  border: 2.5px solid var(--glass-border);
+  backdrop-filter: blur(2.5px);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: var(--cream);
+  margin-bottom: 2.2em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+  z-index: 1;
+  text-shadow: 0 1px 8px var(--glass-border);
+  text-align: center;
+}
+
+.waitlist-form {
+  background: var(--glass);
+  border: 2.5px solid var(--glass-border);
+  border-radius: 2.5em;
+  padding: 2.5em 3em 2em 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  min-width: 340px;
+  box-shadow: 0 8px 48px 0 rgba(231,217,196,0.18);
+  z-index: 1;
+  backdrop-filter: blur(6px) saturate(1.2);
+  transition: box-shadow 0.2s, border 0.2s;
+  align-items: center;
+  text-align: center;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+}
+
+.waitlist-form label {
+  font-size: 1.08rem;
+  color: var(--cream);
+  margin-bottom: 0.3em;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.waitlist-form input {
+  padding: 0.9em 1.2em;
+  border: none;
+  border-radius: 1.2em;
+  background: var(--cream);
+  color: var(--black);
+  font-size: 1.08rem;
+  margin-bottom: 0.5em;
+  outline: none;
+  transition: box-shadow 0.2s, background 0.2s;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+  box-shadow: 0 1px 12px 0 rgba(231,217,196,0.13);
+  text-align: center;
+}
+
+.waitlist-form input:focus {
+  box-shadow: 0 0 0 3px var(--beige);
+  background: #fffbe6;
+}
+
+.waitlist-form button {
+  background: linear-gradient(90deg, var(--cream) 60%, var(--beige) 100%);
+  color: var(--black);
+  border: none;
+  border-radius: 2em;
+  padding: 1em 1.5em;
+  font-size: 1.18rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin-top: 0.5em;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+  box-shadow: 0 2px 18px 0 rgba(231,217,196,0.18);
+  letter-spacing: 0.01em;
+}
+
+.waitlist-form button:hover {
+  background: linear-gradient(90deg, var(--beige) 60%, var(--cream) 100%);
+  color: var(--black);
+  box-shadow: 0 4px 24px 0 rgba(231,217,196,0.22);
+}
+
+.success-message {
+  color: var(--cream);
+  background: rgba(245,239,230,0.22);
+  border-radius: 1.2em;
+  padding: 1.1em;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.15rem;
+  border: 1.5px solid var(--beige);
+  display: none;
+  font-family: 'Nunito', 'Nunito Sans', 'Baloo 2', 'Fredoka One', cursive;
+  box-shadow: 0 1px 12px 0 rgba(231,217,196,0.13);
+}
+
+@media (max-width: 600px) {
+  .waitlist-form {
+    min-width: 0;
+    width: 97vw;
+    padding: 1.2em 0.5em 1em 0.5em;
+    border-radius: 2em;
+  }
+  .logo {
+    font-size: 2.1rem;
+    border-radius: 1.2em;
+    padding: 0.1em 0.3em;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
